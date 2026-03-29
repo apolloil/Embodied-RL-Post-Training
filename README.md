@@ -1,6 +1,6 @@
 # Embodied-RL-Post-Training
 
-Embodied-RL-Post-Training 是一个面向 MetaWorld 的多任务强化学习研究代码仓库，围绕 GPT policy backbone + C51 distributional critic，提供覆盖数据、训练、评估与可视化的完整实验 pipeline，以及用于系统比较不同训练策略的多分支脚本。
+Embodied-RL-Post-Training 是一个基于 MetaWorld benchmark的 多任务RL后训练 研究代码仓库，围绕 GPT policy backbone + C51 distributional critic，提供覆盖数据采集、训练、评估与策略分布可视化的完整实验 pipeline，以及用于系统比较不同训练策略的多分支脚本。
 
 仓库同时包含像素输入与状态输入两条实验线，覆盖离线训练、offline-to-online 微调、串行训练与并行训练，并将 BRC、TD3+BC、CalQL、EDAC、SO2 等方法整理到统一的配置与工具链下，便于复现实验、横向对比和扩展新方法。
 
