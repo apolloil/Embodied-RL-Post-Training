@@ -1,0 +1,22 @@
+# Local/private directories that should not be published
+BC+TD3/
+datasets/
+exp_local/
+TD3BC_Ablation/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Common local artifacts
+.DS_Store
+*.log
+
+# Generated experiment artifacts
+.hydra/
+multirun/
+outputs/
+logs/
+Plot/
+eval_logs/
+eval_videos/

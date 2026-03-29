@@ -1,0 +1,316 @@
+defaults:
+  - _self_
+
+IS: "input your experiment name" 
+seed: 2
+device: "cuda"
+work_dir: "./exp_local/${env.suite_name}/${now:%Y.%m.%d}/${now:%H%M%S}_${IS}"
+
+env:
+  suite_name: "STAGE2"
+  task_names: "MT30"
+  
+  img_size: 84         
+  action_repeat: 1        
+
+  MT50:
+    - "assembly-v2"
+    - "basketball-v2"
+    - "bin-picking-v2"
+    - "box-close-v2"
+    - "button-press-topdown-v2"
+    - "button-press-topdown-wall-v2"
+    - "button-press-v2"
+    - "button-press-wall-v2"
+    - "coffee-button-v2"
+    - "coffee-pull-v2"
+    - "coffee-push-v2"
+    - "dial-turn-v2"
+    - "disassemble-v2"
+    - "door-close-v2"
+    - "door-lock-v2"
+    - "door-open-v2"
+    - "door-unlock-v2"
+    - "drawer-close-v2"
+    - "drawer-open-v2"
+    - "faucet-close-v2"
+    - "faucet-open-v2"
+    - "hammer-v2"
+    - "hand-insert-v2"
+    - "handle-press-side-v2"
+    - "handle-press-v2"
+    - "handle-pull-side-v2"
+    - "handle-pull-v2"
+    - "lever-pull-v2"
+    - "peg-insert-side-v2"
+    - "peg-unplug-side-v2"
+    - "pick-out-of-hole-v2"
+    - "pick-place-v2"
+    - "pick-place-wall-v2"
+    - "plate-slide-back-side-v2"
+    - "plate-slide-back-v2"
+    - "plate-slide-side-v2"
+    - "plate-slide-v2"
+    - "push-back-v2"
+    - "push-v2"
+    - "push-wall-v2"
+    - "reach-v2"
+    - "reach-wall-v2"
+    - "shelf-place-v2"
+    - "soccer-v2"
+    - "stick-pull-v2"
+    - "stick-push-v2"
+    - "sweep-into-v2"
+    - "sweep-v2"
+    - "window-close-v2"
+    - "window-open-v2"
+
+  MT30:
+    - "basketball-v2"
+    - "bin-picking-v2"
+    - "button-press-topdown-v2"
+    - "button-press-topdown-wall-v2"
+    - "button-press-v2"
+    - "button-press-wall-v2"
+    - "coffee-button-v2"
+    - "coffee-pull-v2"
+    - "coffee-push-v2"
+    - "dial-turn-v2"
+    - "disassemble-v2"
+    - "door-lock-v2"
+    - "door-open-v2"
+    - "door-unlock-v2"
+    - "drawer-close-v2"
+    - "drawer-open-v2"
+    - "faucet-close-v2"
+    - "faucet-open-v2"
+    - "hammer-v2"
+    - "handle-press-side-v2"
+    - "handle-press-v2"
+    - "handle-pull-side-v2"
+    - "handle-pull-v2"
+    - "shelf-place-v2"
+    - "soccer-v2"
+    - "stick-push-v2"
+    - "sweep-into-v2"
+    - "sweep-v2"
+    - "window-close-v2"
+    - "window-open-v2"
+
+  cameras:
+    assembly-v2: "corner"
+    basketball-v2: "corner"
+    bin-picking-v2: "corner"
+    box-close-v2: "corner"
+    button-press-topdown-v2: "corner"
+    button-press-topdown-wall-v2: "corner"
+    button-press-v2: "corner"
+    button-press-wall-v2: "corner"
+    coffee-button-v2: "corner"
+    coffee-pull-v2: "corner"
+    coffee-push-v2: "corner"
+    dial-turn-v2: "corner"
+    disassemble-v2: "corner"
+    door-close-v2: "corner"
+    door-lock-v2: "corner"
+    door-open-v2: "corner3"
+    door-unlock-v2: "corner"
+    drawer-close-v2: "corner"
+    drawer-open-v2: "corner"
+    faucet-close-v2: "corner"
+    faucet-open-v2: "corner"
+    hammer-v2: "corner3"
+    hand-insert-v2: "corner"
+    handle-press-side-v2: "corner3"
+    handle-press-v2: "corner3"
+    handle-pull-side-v2: "corner3"
+    handle-pull-v2: "corner3"
+    lever-pull-v2: "corner"
+    peg-insert-side-v2: "corner3"
+    peg-unplug-side-v2: "corner"
+    pick-out-of-hole-v2: "corner"
+    pick-place-v2: "corner"
+    pick-place-wall-v2: "corner"
+    plate-slide-back-side-v2: "corner3"
+    plate-slide-back-v2: "corner3"
+    plate-slide-side-v2: "corner3"
+    plate-slide-v2: "corner3"
+    push-back-v2: "corner"
+    push-v2: "corner"
+    push-wall-v2: "corner"
+    reach-v2: "corner"
+    reach-wall-v2: "corner"
+    shelf-place-v2: "corner3"
+    soccer-v2: "corner3"
+    stick-pull-v2: "corner3"
+    stick-push-v2: "corner3"
+    sweep-into-v2: "corner"
+    sweep-v2: "corner"
+    window-close-v2: "corner3"
+    window-open-v2: "corner3"
+
+  max_episode_steps:
+    assembly-v2: 200
+    basketball-v2: 200
+    bin-picking-v2: 200
+    box-close-v2: 200
+    button-press-topdown-v2: 200
+    button-press-topdown-wall-v2: 200
+    button-press-v2: 200
+    button-press-wall-v2: 200
+    coffee-button-v2: 200
+    coffee-pull-v2: 200
+    coffee-push-v2: 200
+    dial-turn-v2: 200
+    disassemble-v2: 200
+    door-close-v2: 200
+    door-lock-v2: 200
+    door-open-v2: 200
+    door-unlock-v2: 200
+    drawer-close-v2: 200
+    drawer-open-v2: 200
+    faucet-close-v2: 200
+    faucet-open-v2: 200
+    hammer-v2: 200
+    hand-insert-v2: 200
+    handle-press-side-v2: 200
+    handle-press-v2: 200
+    handle-pull-side-v2: 200
+    handle-pull-v2: 200
+    lever-pull-v2: 200
+    peg-insert-side-v2: 200
+    peg-unplug-side-v2: 200
+    pick-out-of-hole-v2: 200
+    pick-place-v2: 200
+    pick-place-wall-v2: 200
+    plate-slide-back-side-v2: 200
+    plate-slide-back-v2: 200
+    plate-slide-side-v2: 200
+    plate-slide-v2: 200
+    push-back-v2: 200
+    push-v2: 200
+    push-wall-v2: 200
+    reach-v2: 200
+    reach-wall-v2: 200
+    shelf-place-v2: 200
+    soccer-v2: 200
+    stick-pull-v2: 200
+    stick-push-v2: 200
+    sweep-into-v2: 200
+    sweep-v2: 200
+    window-close-v2: 200
+    window-open-v2: 200
+
+
+
+# =============================================================================
+# 3. Agent Settings (Agent / Networks)
+# =============================================================================
+agent:
+
+  repr_dim: 512  # Output dim of the representation module; also the GPT input dim
+
+  vision_encoder:
+    pretrained: false
+    freeze: false
+
+  gpt:
+    output_dim: 512
+    n_layer: 8
+    n_head: 8
+    n_embd: 512    
+    block_size: 65    
+    dropout: 0.05
+
+  action_chunking:  
+    num_queries: 1   
+    num_exec: 1
+
+  actor:
+    hidden_size: 256  
+    num_layers: 2
+    log_std_min: -20
+    log_std_max: 2
+    
+  # [Added] Critic configuration (for RL stage)
+  # Note: actual critic hyperparams are under train.rl.critic
+
+# =============================================================================
+# 4. Training & Evaluation Settings
+# =============================================================================
+train:
+  batch_size: 256 
+  num_workers: 4
+  use_tb: true
+  
+  optimizer:
+    lr: 1e-4 
+    weight_decay: 1e-4
+
+  # Imitation learning stage
+  bc:
+    num_steps: 601000  
+    log_freq: 1000
+    eval_freq: 50000
+    num_eval_episodes: 10
+    save_freq: 200000
+    
+  rl:
+    # --- Snapshot loading ---
+    use_rl_snapshot: false
+    rl_snapshot: null              # Set from CLI for fine-tuning, e.g. train.rl.rl_snapshot=/path/to/snapshot.pt
+    encoder_freeze: false            # Whether to freeze the vision encoder during RL training
+    # --- Experiment Control ---
+    num_rolls: 100000             # Total interaction rolls (each roll re-makes envs to avoid OpenGL context conflicts)
+    num_offline_steps: 601000     # Total offline training steps (for OFF_* scripts)
+    num_eval_episodes: 10         # Episodes per task during offline evaluation (BRC default: 10)
+    
+    # --- Data & Buffer ---
+    batch_size: 256               # Batch size
+    
+    # --- Optimization (Updates per Data) ---
+    UTD: 3                        # UTD (Updates-To-Data): gradient updates per interaction step (BRC default: 2)
+    
+    # --- BRC / SAC Hyperparameters ---
+    discount: 0.97                # Gamma
+    tau: 0.005                    # Soft update coefficient
+    init_temperature: 0.1      # Initial Alpha
+    target_entropy: null          # null means auto-set to -dim (note: dim = chunk_size * act_dim)
+    
+    optimizer:
+      lr_actor: 3e-4              # BRC Default
+      lr_critic: 3e-4             # BRC Default
+      lr_temp: 3e-4               # BRC Default
+      weight_decay: 0          # Weight Decay
+      
+    # --- Distributional Critic (C51) ---
+    critic:
+      # BRC (Bigger Regularized Categorical) core parameters
+      # Note: BRC uses a very wide Critic (4096)
+      # hidden_dim: 4096       
+      hidden_dim: 1024 
+      depth: 2                 
+      ensemble_size: 2            # Double Q-Learning
+      num_bins: 101               # C51 atom count
+      v_min: 0.0                  # Value distribution lower bound (MetaWorld rewards are always positive)
+      v_max: 20.0                 # Value distribution upper bound
+
+eval:
+  num_eval_episodes: 10
+  snapshot_path: null            # Set from CLI when evaluating, e.g. eval.snapshot_path=/path/to/snapshot.pt
+# =============================================================================
+# 5. Dataset Settings (Data)
+# =============================================================================
+data:
+  root_dir: "./datasets"
+  num_demos_per_task: 50
+
+# =============================================================================
+# 6. Hydra System Configuration
+# =============================================================================
+hydra:
+  run:
+    dir: ${work_dir}
+  sweep:
+    dir: ${work_dir}_sweep
+    subdir: ${hydra.job.num}
